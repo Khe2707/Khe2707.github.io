@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
+            integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+        <title>Font Awesome Icons</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <title>Document</title>
+<style>* {  
+    box-sizing: border-box;
+}
+header{
+    height: 70px;
+}
+.logo{
+    width: 150px;
+    float: left;
+    height: 100px;
+    margin: 10px 10px 10px 40px;
+}   
+.menuIcon{
+    display: none;
+    width: 50px;
+    height: 50px;
+    margin: 10px 10px 10px 40px;
+}
+.menu{
+    float: right;
+    margin-right: 100px;
+}
+.menu li{
+    display: block;
+    font-weight: 700;
+    list-style: none;
+}
+.menu li a{
+    text-decoration: none;
+    padding: 0 20px 0 20px;
+    line-height: 74px;
+    color: black;
+}
+body {  
+    font-family: Arial;  
+    padding: 10px;  
+    background: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}/* Header/Blog Title */
+.header { 
+    padding: 10px;  
+    text-align: center;  
+    background: white;  
+    color: #58257b;
+}
+.header h1 {  
+    font-size: 40px;
+}
+.header p {  
+    font-size: 20px;
+}
+/* Style the top navigation bar */
+.topnav {  
+    overflow: hidden;  
+    background-color: white;
+}
+/* Định dạng link điều hướng */
+.topnav a {  
+    float: left;  
+    display: block;  
+    color: gray;  
+    text-align: center;  
+    padding: 14px 16px;  
+    text-decoration: none;
+    margin-top: 35px;
+}
+/* Tạo hai cột không bằng nhau, float cạnh nhau *//* Cột trái */
+.leftcolumn {   
+    float: left;  
+    width: 60%;
+}/* Cột phải */
+.rightcolumn {  
+    float: left;  
+    width: 40%;  
+    background-color: white;  
+    padding-left: 20px;
+}
+/* Hình ảnh tượng trưng */
+.fakeimg {  
+    background-color: white; 
+    width: 100%; 
+    padding: 20px;
+}
+/* Thêm định dạng thẻ cho bài viết */
+.card {  
+    background-color: white;  
+    padding: 20px;
+}
+/* Clear float khác sau các cột */
+.row:after {  
+    content: "";  
+    display: table;  
+    clear: both;
+    display: flex;
+    flex: auto;
+}/* Footer */
+h2{
+    color: blue;
+}
+.fakeimg img{
+    width: 100%;
+}
+/* Bố cục linh hoạt: các cột xếp chồng lên nhau thay vì cạnh nhau khi màn hình có chiều rộng dưới 700px */
+@media screen and (max-width: 700px) {  
+    .leftcolumn, 
+    .rightcolumn {     
+        width: 100%;    
+        padding: 0;  
+    }
+}/* Bố cục linh hoạt: Thanh menu điều hướng xếp chồng lên nhau thay vì cạnh nhaukhi màn hình có chiều rộng dưới 300px  */
+@media screen and (max-width: 320px) {  
+    .topnav a {    
+        float: none;    
+        width: 100%;  
+        }
+    }
+    /* Điện thoại dọc */
+@media all and (min-width:320px){
+    .menuIcon{
+        display: block;
+    }
+    .logo{
+        margin-left: 10px;
+    }
+    .banner{
+        height: 100px;
+    }
+    .menu{
+        margin: 0;
+        width: 100%;
+        display: none;
+    }
+    .menu li{
+        display: inline-block;
+        width: 100%;
+    }
+    .menu li a{
+        line-height: 50px;
+    }
+}
+/* Điện thoại ngang */
+@media all and (min-width:576px){
+    .banner{
+        height: 180px;
+    }
+}
+/* Tablet */
+@media all and (min-width:768px){
+    .menu{
+        width: auto;
+        display: flex;
+        border: none;
+        margin-right: 50px;
+    }
+    .menuIcon{
+        display: none;
+    }
+    .logo{
+        margin-left: 40px;
+    }
+    .menu li{
+        display: inline;    
+        width: auto;
+        border: none;
+        background-image: none;
+        line-height: 70px;
+        font-size: 19px;
+    }
+    .menu li:hover{
+        
+        background-image: radial-gradient(circle, rgb(124, 205, 218), rgb(188, 236, 244), rgb(229, 255, 229));
+        border-radius: 50px;
+    }
+}
+/* Máy tính */
+@media all and (min-width: 992px) {
+    .menu li{
+        font-size: large    ;
+    }
+    .banner{
+        height: 350px;
+  }
+}
+</style>
+</head>
+<body>
+  <header>
+    <a class="logo" href="index.html"><img src="v_tieude.png" alt=""></a>
+    <img onclick="showMenu()" class="menuIcon" style="float: right;"  src="a3.jpg" alt="">
+    
+    <ul class="menu" id="menuL">
+        <li><a href="">GIỚI THIỆU</a></li>
+        <li><a href=""><i class="fa fa-fighter-jet"></i>&ensp;VÉ MÁY BAY</a></li>
+        <li><a href=""><i class="fa fa-hotel"></i></i>&ensp;KHÁCH SẠN</a></li>
+        <li><a href="lienhe.html"><i class="fa fa-phone"></i></i>&ensp;LIÊN HỆ</a></li>
+        <li><a href="tintuc.html">TIN TỨC</a></li>
+    </ul>
+</header>
+<img class="banner" src="giaithuong-v-disan-1920.jpg" alt="" width="100%">
+<br>
+    <div class="row">  
+        <div class="leftcolumn">    
+            <div class="card">
+                <h2>DU LỊCH PHAN THIẾT</h2>
+                <div class="fakeimg" >
+                    <img src="b1.jpg" alt="">
+                </div>      
+                <p><h4>Hạ tầng giao thông tạo đà tăng trưởng đô thị du lịch Phan Thiết</h4></p>      
+                <p>Khi tiến độ xây dựng sân bay và cao tốc đang được đẩy nhanh, thị trường bất động sản Phan Thiết được kỳ vọng sẽ bứt tốc mạnh mẽ như thành phố du lịch Nha Trang.</p>    
+            </div>    
+            <div class="card">
+                <h2>Du lịch Phan Thiết đi ở đâu?
+                    <br>Những điểm chơi quên lối về
+                </h2>                 
+                <p><h4>Đảo Phú Quý</h4></p>
+                <p>Đảo Phú Quý còn được gọi là Cù Lao Khoai Xứ, Cù Lao Thu. Nơi đây cách bờ biển của Phan Thiết 100km. Điểm ấn tượng với khách du lịch tìm đến đây chính là khung cảnh thiên nhiên hoang sơ, người dân thân thiện và cởi mở. Có lẽ thế, đảo Phú Quý đang hot rần rần ở trên mạng, được vô số người chọn đến đây để thăm quan.</p>
+                <p>Đảo có thảm thực vật rạn san hô đa dạng và phong phú cùng bãi tắm đẹp như bãi Doi Dừa, vịnh Triều Dương, bãi Nhỏ Gành Hang… giúp bạn tha hồ vùng vẫy, khám phá.</p>
+                <div class="fakeimg"><img src="b7.jpg" alt=""></div> 
+                <p>Đến với hòn đảo này, khách du lịch nên ghé thăm chùa cổ Linh Sơn nằm ở trên núi Cao Cát. Từ đỉnh núi này, bạn dễ dàng chiêm ngưỡng được khung cảnh ngoạn mục cùng làn nước xanh bao la, núi rừng…. Điểm nhấn ở đây là vách đá xếp tầng bắt mắt tạo ra giá trị cho  dãy núi vươn ra phía biển. Xung quanh hòn đảo Phú Quý còn có cả Hòn Đen, Hòn Tranh, Hòn Trứng… tạo ra sự hấp dẫn ở nơi này.</p>    
+                <br>
+                <p><h4>Bàu Trắng - Bàu Sen</h4></p>
+                <p>Bàu Trắng - Bàu Sen là nơi nên đến khi bạn tới Phan Thiết. Đây là hồ nước ngọt nằm ở đồi cát trắng rộng mênh mông. Bàu trắng này còn được gọi với cái tên là Bầu Ông, nơi bạn dễ dàng xem được hoa sen nở lẫn giữa đồi cát trắng mộc mạc, hoang sơ.</p>
+                <div class="fakeimg"><img src="b7.jpg" alt=""></div> 
+                <p>Bàu Sen còn gọi với cái tên là Bàu Bà. Đây là nơi biển rộng, mặt nước xanh trong được bao bọc bởi cồn cát. Đến đây, bạn đừng bỏ qua hoạt động như trượt ván, chinh phục đồi cát bằng xe địa hình, cưỡi đà điểu nhé. Một bàu có nguyên một đầm sen là địa điểm chụp hình cưới và ảnh cho giới trẻ cực nổi tiếng ở Mũi Né.</p>    
+                <p>Nếu bạn chọn tàu xe đi mũi né thì tại ga Mương Mán có xe trung chuyển về các resort Mũi Né luôn đấy. Tuy nhiên mách bạn là nên ở lại đây buổi tối vì ban đêm, bạn có thể nằm nghe sóng biển - sớm mai thức giấc và chỉ cần vén cửa lều là có thể ngắm bình minh tuyệt đẹp từ xa xa.</p>
+            </div>  
+        </div>  
+        <div class="rightcolumn">    
+            <div class="card">      
+                <h3>BẤT ĐỘNG SẢN</h3>      
+                <div class="fakeimg"><img src="b2.jpg" alt="">     
+                    <p><h4>3 lý do thú vị để đến NovaWorld Phan Thiet dịp lễ 2/9</h4></p>
+                    <p>Sau 2 năm liên tiếp nghỉ lễ Quốc khánh ở nhà, năm nay nhiều gia đình đã rục rịch kế hoạch đi nghỉ ở nơi xa. Trong đó thành phố biển Phan Thiết, NovaWorld Phan Thiet được nhiều gia đình “chốt” đến bởi 3 điều thú vị dưới đây…</p>
+                </div> 
+            </div>    
+            <div class="card">      
+                <h3>Nổi bật</h3>      
+                <div class="fakeimg">
+                    <img src="b4.jpg" alt="">
+                    <p><h4>Nhà đầu tư miền Bắc kỳ vọng vào tiềm năng khai thác du lịch của Phan Thiết</h4></p>
+                </div>      
+                <div class="fakeimg">
+                    <img src="b5.jpg" alt="">
+                    <p><h4>Lễ hội mùa hè sôi động tại Novaworld Phan Thiet dịp lễ 30/4</h4></p>
+                </div>      
+                <div class="fakeimg">
+                    <img src="b6.jpg" alt="">
+                    <p><h4>Tiềm năng và sức hút của dòng sản phẩm thương mại đa năng ven biển</h4></p>
+                </div>    
+            </div>    
+            <div class="card">      
+                <h3>Follow Me</h3>      
+                <p><img src="c1.jpg" alt="" width="50%"><img src="c2.jpg" alt="" width="50%"></p>
+                <p><img src="c3.jpg" alt="" width="50%"><img src="c4.jpg" alt="" width="50%"></p>         
+            </div>  
+        </div>
+    </div>
+    <br>
+    <footer>
+        <form>
+            <div class="container">
+                <div class="row">
+                  <div class="col">
+                    Tích điểm Qùa tặng VIP <br>
+                    Lịch sử mua hàng <br>
+                    Tìm hiểu về mua trả góp <br>
+                    Chính sách bảo hành
+                  </div>
+                  <div class="col">
+                    Giới thiệu công ty <br>
+                    Tuyển dụng <br>
+                    Gửi góp ý, khiếu nại <br>
+                    Tìm siêu thị (3.383 shop) <br>
+                    Xem bản mobile
+                  </div>
+                  <div class="col">
+                    <h6>Tổng đài hỗ trợ</h6>
+                    Gọi mua: 1800.1060 (7:30 - 22:00) <br>
+                    Khiếu nại: 1800.1062 (8:00 - 21:30) <br>
+                    Bảo hành: 1800.1064 (8:00 - 21:00)
+                  </div>
+                  <div class="col">
+                    <div class="mb-3">
+                        <label for="exampleInputEmail1" class="form-label">Email address</label>
+                        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                        <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+                      </div>
+                      <div class="mb-3">
+                        <label for="exampleInputPassword1" class="form-label">Password</label>
+                        <input type="password" class="form-control" id="exampleInputPassword1">
+                      </div>
+                      <div class="mb-3 form-check">
+                        <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                        <label class="form-check-label" for="exampleCheck1">Check me out</label>
+                      </div>
+                      <button type="submit" class="btn btn-primary">Submit</button>
+                  </div>
+                </div>
+                <br>
+            </div>
+        </form>
+      </footer>
+      <script>
+        function showMenu(){
+            if(document.getElementById('menuL').style.display=='none'){
+                document.getElementById('menuL').style.display='inline-block';   
+            }else{
+                document.getElementById('menuL').style.display='none';
+            }
+        }
+    </script>
+    <div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.025);">
+        © 2023 Copyright:
+        <a class="text-reset fw-bold" href="https://mdbootstrap.com/">khaivtps28301@fpt.edu.vn</a>
+      </div>
+</body>
+</html>
